@@ -1,5 +1,5 @@
 """
-iA suite of tools for managing digital microfluidic biochips.
+A suite of tools for managing digital microfluidic biochips.
 Developed by Jonathan Niles
 January 2012
 """
@@ -16,12 +16,12 @@ import pulp
 # TODO: Impliment http://code.enthought.com/projects/chaco/gallery.php selectable colormap as plot
 # FIXME: Abs() line 177-178 
 # FIXME: Matplotlib Broken.  Reinstall.
-#
+# TODO: Integrate Droplet+Sink+Chip
 #
 #
 #####################################
 
-class Drop(object):
+class Droplet(object):
   def __init__(self, x, y):
     """
     Creates a droplet object to navigate the
@@ -48,20 +48,6 @@ class Sink(object):
     """
     self.x = x
     self.y = y
-
-class BioChipOS:
-  def __init__(self, bchip):
-    """
-    test concurrency, least paths. etc.
-    """
-    self.bchip = bchip
-  
-  def testConcurrencyILP(self, maskArray):
-    """
-    Runs a simulated concurrent test framework as
-    an integer linear programming model.
-    """
-    pass
 
 class Chip:
   def __init__(self, xsize, ysize, tsize):
