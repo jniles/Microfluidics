@@ -15,7 +15,7 @@ import pulp
 # TODO: Impliment VisChip in Chaco!
 # TODO: Impliment http://code.enthought.com/projects/chaco/gallery.php selectable colormap as plot
 # FIXME: Abs() line 177-178 
-# FIXME: Matplotlib Broken.  Reinstall.
+# 
 # TODO: Integrate Droplet+Sink+Chip
 #
 #
