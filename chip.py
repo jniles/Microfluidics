@@ -97,14 +97,14 @@ class Concurrency:
                       [(i,j,k) for i in range(1,x+1)
                       for j in range(1,y+1)
                       for k in range(1,t+1)],
-                      0,1, pulp.LpBinary)
+                      0,1, cat="Integer")
     #Add sink
     for i in range(1,t+1):
-      chip[(n,m,i)] = pulp.LpVariable("Sink", pulp.LpBinary)
+      chip[(n,m,i)] = pulp.LpVariable("Sink", 0,1, cat="Integer")
 
     #Add virtual cell
     for i in range(1, t+1):
-      chip[(n+1,m, i)] = pulp.LpVariable("VirtualSpot", pulp.LpBinary)
+      chip[(n+1,m, i)] = pulp.LpVariable("VirtualSpot", 0, 1, cat="Integer")
 
     #Create problem instance
     self.ilp = pulp.LpProblem('Concurrency Testing ILP', pulp.LpMinimize)
